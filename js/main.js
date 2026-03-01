@@ -2,98 +2,271 @@
    Stone Sharp Academy — Main JavaScript
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
-  highlightActiveLink();
-  initFaqAccordion();
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initSmoothScroll();
+    initScrollAnimations();
+    initHeaderScroll();
+    initFaqAccordion();
+    initQuoteForm();
 });
 
-/* --- Navigation --- */
+/* --- Navigation Toggle for Mobile --- */
 function initNavigation() {
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const mobileOverlay = document.querySelector('.mobile-overlay');
-  const header = document.querySelector('.site-header');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-  // Hamburger toggle
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileNav.classList.toggle('active');
-      mobileOverlay.classList.toggle('active');
-      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-    });
-  }
+    if (!navToggle || !navMenu) return;
 
-  // Close on overlay click
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('active');
-      mobileOverlay.classList.remove('active');
-      document.body.style.overflow = '';
+    navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
-  }
 
-  // Close on mobile nav link click
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileNav.classList.remove('active');
-        mobileOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      });
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
-  }
 
-  // Header shadow on scroll
-  if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     });
-  }
 }
 
-/* --- Active Link Highlighting --- */
-function highlightActiveLink() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+/* --- Smooth Scroll for Anchor Links --- */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
 
-  document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
+            const target = document.querySelector(href);
+            if (!target) return;
+
+            e.preventDefault();
+
+            const header = document.getElementById('header');
+            const headerHeight = header ? header.offsetHeight : 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+/* --- Scroll-triggered Animations --- */
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    if (!animatedElements.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+}
+
+/* --- Header Scroll Effect --- */
+function initHeaderScroll() {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 }
 
 /* --- FAQ Accordion --- */
 function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
-  if (!faqItems.length) return;
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
 
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
 
-    question.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
 
-      // Close all
-      faqItems.forEach(i => {
-        i.classList.remove('active');
-        i.querySelector('.faq-answer').style.maxHeight = null;
-      });
+            // Close all
+            faqItems.forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+            });
 
-      // Open clicked (if it wasn't already open)
-      if (!isActive) {
-        item.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
+            // Open clicked (if it wasn't already open)
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
     });
-  });
 }
+
+/* --- Quote / Contact Form Handling --- */
+function initQuoteForm() {
+    const form = document.getElementById('quoteForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Basic validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            removeError(field);
+
+            if (!field.value.trim()) {
+                showError(field, 'This field is required');
+                isValid = false;
+            } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                showError(field, 'Please enter a valid email address');
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            const firstError = form.querySelector('.form-error');
+            if (firstError) {
+                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
+
+        // Collect form data
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // Store in localStorage (for demo purposes)
+        const submissions = JSON.parse(localStorage.getItem('quoteSubmissions') || '[]');
+        submissions.push({
+            ...data,
+            timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('quoteSubmissions', JSON.stringify(submissions));
+
+        // Show success message
+        form.classList.add('hidden');
+        if (formSuccess) formSuccess.classList.add('show');
+
+        console.log('Form Submitted:', data);
+    });
+
+    // Real-time validation
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('blur', function() {
+            validateField(this);
+        });
+
+        field.addEventListener('input', function() {
+            if (this.parentElement.querySelector('.form-error')) {
+                validateField(this);
+            }
+        });
+    });
+}
+
+function validateField(field) {
+    removeError(field);
+
+    if (field.required && !field.value.trim()) {
+        showError(field, 'This field is required');
+        return false;
+    }
+
+    if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+        showError(field, 'Please enter a valid email address');
+        return false;
+    }
+
+    return true;
+}
+
+function showError(field, message) {
+    field.style.borderColor = 'var(--color-error)';
+
+    const existingError = field.parentElement.querySelector('.form-error');
+    if (existingError) {
+        existingError.textContent = message;
+        return;
+    }
+
+    const error = document.createElement('span');
+    error.className = 'form-error';
+    error.textContent = message;
+    error.style.cssText = 'color: var(--color-error); font-size: 0.75rem; margin-top: 0.25rem; display: block;';
+    field.parentElement.appendChild(error);
+}
+
+function removeError(field) {
+    field.style.borderColor = '';
+    const error = field.parentElement.querySelector('.form-error');
+    if (error) error.remove();
+}
+
+function isValidEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+/* --- Phone Number Formatting --- */
+document.addEventListener('input', function(e) {
+    if (e.target.id === 'phone') {
+        var value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            if (value.length <= 3) {
+                value = '(' + value;
+            } else if (value.length <= 6) {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3);
+            } else {
+                value = '(' + value.substring(0, 3) + ') ' + value.substring(3, 6) + '-' + value.substring(6, 10);
+            }
+        }
+        e.target.value = value;
+    }
+});
+
+/* --- Active Link Highlighting --- */
+(function() {
+    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+})();

@@ -3,129 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ — Stone Sharp Academy</title>
+  <title>FAQ | Stone Sharp Academy</title>
   <meta name="description" content="Frequently asked questions about Stone Sharp Academy's math tutoring programs, pricing, sessions, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="Stone Sharp Academy">
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="why-us.html">Why Us</a>
-        <a href="success-stories.html">Success Stories</a>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="Stone Sharp Academy">
+        </a>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="how-it-works.html" class="nav-link">How It Works</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Log In
+          </a>
+          <a href="book.html" class="btn btn-primary nav-cta">Book Assessment</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
       </nav>
-      <a href="book.html" class="btn btn-primary btn-nav nav-cta desktop-only">Book Assessment</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </header>
-  <div class="mobile-overlay"></div>
-  <nav class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="why-us.html">Why Us</a>
-    <a href="success-stories.html">Success Stories</a>
-    <a href="about.html">About</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="book.html" class="btn btn-primary">Book Assessment</a>
-  </nav>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Frequently Asked Questions</h1>
-      <p>Common questions from parents about how Stone Sharp Academy works.</p>
+      <h1>FAQ</h1>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section">
     <div class="container">
-      <div class="faq-list">
+      <div class="faq-list animate-on-scroll">
 
         <div class="faq-item">
           <button class="faq-question">
-            How much does it cost?
+            How much does tutoring cost?
             <span class="faq-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </span>
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Programs start at $270 per month. This includes weekly 1-on-1 tutoring sessions, custom worksheets, daily drop-in sessions, and a clear improvement plan. Every student starts with a free assessment. No commitment needed to find out where your child stands.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            What grades and courses do you cover?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              We only teach Grades 9-12 math: Math 9, Math 10C, Math 20-1, Math 20-2, Math 30-1, and Math 30-2. All of our materials and plans follow the Alberta curriculum.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is tutoring online or in-person?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Both. We offer in-person tutoring in Edmonton and online sessions for students who like working from home. The quality is the same either way. The only difference is how you connect.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            What are drop-in sessions?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Drop-in sessions are daily online group sessions where students can get homework help, ask worksheet questions, or review for tests. They're included in every program at no extra cost. They run every day so students never have to wait until their next 1-on-1 session to get help.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            How are worksheets customized?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              We build worksheets from scratch based on your child's specific gaps. After the first assessment and after each session, we create practice that targets exactly what your child needs to work on. They're not pulled from a textbook. They're made just for your child.
+              Pricing depends on session format and recommended frequency. After the free assessment, families receive a clear breakdown before making any commitment.
             </div>
           </div>
         </div>
@@ -139,7 +73,69 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              The assessment is a short meeting where we learn about your child's current course, what they're struggling with, and their learning history. We go through a set of questions to find where the gaps are. After that, we share what we found and suggest next steps. There's no obligation. It's just about finding out where your child is right now.
+              It's a short meeting where we:
+              <ul>
+                <li>Learn about your child's current course and struggles</li>
+                <li>Go through questions to find where the gaps are</li>
+                <li>Share what we found and suggest next steps</li>
+              </ul>
+              There's no obligation. It's just about finding out where your child is.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What grades and courses do you cover?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We only teach Grades 9–12 math: Math 9, Math 10C, Math 20-1, Math 20-2, Math 30-1, and Math 30-2. All of our materials and plans follow the Alberta curriculum.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is tutoring online or in-person?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Both. Online sessions work great from home. For in-person, we come to you, whether that's your home, a library, a cafe, or wherever is convenient. We tutor across Edmonton.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are drop-in sessions?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Drop-in sessions are daily online group sessions where students can get help with homework, worksheets, or test prep. They're included with every program.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What kind of worksheets do students get?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We create structured worksheets based on what was covered in sessions. They're built to reinforce learning and target areas that need more practice.
             </div>
           </div>
         </div>
@@ -153,35 +149,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              It depends on where your child is starting and how far behind they are. Some students feel more confident within the first few weeks. Others, especially those with gaps from earlier grades, may take a bit longer. What we can say is that with regular attendance and practice, the plan makes a real difference.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Can I cancel anytime?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. There are no long-term contracts. If you need to pause or stop, just let us know. We believe the program should speak for itself. Not a contract.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            What makes Stone Sharp different from other tutors?
-            <span class="faq-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Most tutoring is reactive. The tutor shows up and asks "what are you working on?" We do the opposite. Every student gets a plan based on their assessment, custom worksheets built for their specific gaps, and daily access to help between sessions. It's not freelance tutoring. It's a managed program with standards and a system built to get results.
+              Every student is different. Some feel more confident within a few weeks. Students with deeper gaps take longer, but the structured approach helps them build steadily over time.
             </div>
           </div>
         </div>
@@ -195,7 +163,40 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Between 1-on-1 sessions, your child gets custom worksheets and daily online drop-in sessions. The worksheets help them practice what was covered in their last session. The drop-ins are there for quick help if they get stuck. The goal is to keep learning going between meetings, not just during them.
+              Between 1-on-1 sessions, your child gets:
+              <ul>
+                <li>Custom worksheets to practice what was covered</li>
+                <li>Daily online drop-in sessions for quick help when stuck</li>
+              </ul>
+              The goal is to keep learning going every day, not just during sessions.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What makes Stone Sharp different from other tutors?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We combine 1-on-1 tutoring with structured worksheets and daily drop-in support. Every student gets an assessment, a matched tutor, and ongoing resources, not just someone showing up to help with homework.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I cancel anytime?
+            <span class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. No long-term contracts. If you need to pause or stop, just let us know. We keep families because the program works, not because of a contract.
             </div>
           </div>
         </div>
@@ -204,44 +205,51 @@
     </div>
   </section>
 
-  <!-- CTA Banner -->
-  <section class="cta-banner">
+  <!-- CTA Section -->
+  <section class="cta-section">
     <div class="container">
-      <h2>Still Have Questions?</h2>
-      <p>Book a free assessment and we'll answer everything in person.</p>
-      <a href="book.html" class="btn btn-white btn-lg">Book a Free Assessment</a>
+      <div class="cta-content animate-on-scroll">
+        <h2>Still Have Questions?</h2>
+        <p>Book a free assessment and we'll answer everything in person.</p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn btn-primary btn-lg" style="background: var(--color-primary); color: var(--color-white);">Book a Free Assessment</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
+          <a href="index.html" class="footer-logo">
             <img src="assets/logo.svg" alt="Stone Sharp Academy">
           </a>
           <p>Structured math tutoring for Grades 9–12. Serving Edmonton families online and in-person.</p>
         </div>
-        <div class="footer-col">
+        <div class="footer-links">
           <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="why-us.html">Why Us</a>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-links">
           <h4>More</h4>
-          <a href="success-stories.html">Success Stories</a>
-          <a href="about.html">About</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="book.html">Book Assessment</a>
+          <ul>
+            <li><a href="success-stories.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="book.html">Book Assessment</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:7802807221">(780) 280-7221</a>
-          <a href="mailto:admin@stonesharp.academy">admin@stonesharp.academy</a>
-          <span style="display:block; padding: 0.25rem 0; font-size: 0.9rem;">Edmonton, AB</span>
+          <p><a href="tel:7802807221">(780) 280-7221</a></p>
+          <p><a href="mailto:admin@stonesharp.academy">admin@stonesharp.academy</a></p>
+          <p>Edmonton, AB</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -250,6 +258,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

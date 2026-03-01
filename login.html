@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Free Assessment | Stone Sharp Academy</title>
-  <meta name="description" content="Book a free math assessment with Stone Sharp Academy. We'll find your child's gaps and suggest a clear plan. No commitment needed.">
+  <title>Log In | Stone Sharp Academy</title>
+  <meta name="description" content="Log in to your Stone Sharp Academy student or parent portal.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,62 +38,24 @@
     </div>
   </header>
 
-  <!-- Calendly Booking Widget -->
-  <section class="section book-widget-section section-first" id="book-now">
+  <!-- Page Header -->
+  <section class="page-header">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Book Your Free Diagnostic Assessment</h2>
-        <p class="book-urgency">Now enrolling for Spring 2026. Limited spots each semester.</p>
-      </div>
-      <div class="calendly-container animate-on-scroll">
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/stonesharp/math-diagnostic" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
-      </div>
+      <h1>Log In</h1>
     </div>
   </section>
 
-  <!-- What to Expect -->
+  <!-- Login Widget -->
   <section class="section">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">What to Expect</h2>
-        <p class="section-subtitle">This session helps us identify your child's math gaps, strengths, learning style, and current skill level so we can build a personalized plan.</p>
-      </div>
-      <div class="animate-on-scroll" style="max-width: 500px; margin: 0 auto;">
-        <ul class="book-info">
-          <li>30-45 minute online assessment with the student</li>
-          <li>Covers core skills, problem-solving, and course readiness</li>
-          <li>Follow-up call to review results and next steps</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Mini Section -->
-  <section class="section" style="background: var(--color-background);">
-    <div class="container" style="text-align: center; max-width: 600px;">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Common Questions</h2>
-      </div>
+    <div class="container" style="max-width: 500px;">
       <div class="animate-on-scroll">
-        <p style="margin-bottom: var(--spacing-lg);">
-          <strong style="color: var(--color-primary);">Is the assessment really free?</strong><br>
-          <span style="color: var(--color-text-light);">Yes. There's no cost and no obligation. It's just about finding out where your child is.</span>
-        </p>
-        <p style="margin-bottom: var(--spacing-lg);">
-          <strong style="color: var(--color-primary);">How long does it take?</strong><br>
-          <span style="color: var(--color-text-light);">30-45 minutes online with the student, plus a follow-up call to review results.</span>
-        </p>
-        <p style="margin-bottom: var(--spacing-lg);">
-          <strong style="color: var(--color-primary);">Will I get pricing information?</strong><br>
-          <span style="color: var(--color-text-light);">Yes. After the assessment, we provide a clear breakdown of pricing based on the recommended session format and frequency.</span>
-        </p>
-        <p style="margin-bottom: var(--spacing-lg);">
-          <strong style="color: var(--color-primary);">What if we're not ready to start right away?</strong><br>
-          <span style="color: var(--color-text-light);">No problem. The assessment gives you useful information no matter when or if you decide to start.</span>
-        </p>
+        <div id="teachworks-remote-login"></div>
+        <script type="text/javascript">
+        var script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.setAttribute('src', 'https://stonesharpacademy.teachworks.com/remote.js' + location.search);
+        document.body.appendChild(script);
+        </script>
       </div>
     </div>
   </section>

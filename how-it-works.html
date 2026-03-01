@@ -7,235 +7,309 @@
   <meta name="description" content="Learn how Stone Sharp Academy's tutoring process works, from a free assessment to a custom plan to ongoing support.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.svg" alt="Stone Sharp Academy">
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="why-us.html">Why Us</a>
-        <a href="success-stories.html">Success Stories</a>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="Stone Sharp Academy">
+        </a>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="how-it-works.html" class="nav-link">How It Works</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Log In
+          </a>
+          <a href="book.html" class="btn btn-primary nav-cta">Book Assessment</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
       </nav>
-      <a href="book.html" class="btn btn-primary btn-nav nav-cta desktop-only">Book Assessment</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </header>
-  <div class="mobile-overlay"></div>
-  <nav class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="why-us.html">Why Us</a>
-    <a href="success-stories.html">Success Stories</a>
-    <a href="about.html">About</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="book.html" class="btn btn-primary">Book Assessment</a>
-  </nav>
 
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
       <h1>How It Works</h1>
-      <p>A simple, structured process from your first assessment to consistent improvement in the classroom.</p>
     </div>
   </section>
 
-  <!-- 3-Step Process -->
-  <section class="section">
+  <!-- Simplified Steps -->
+  <section class="process-section section">
     <div class="container">
-      <div class="process-steps">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">3 Simple Steps</span>
+        <h2 class="section-title">Getting Started Is Easy</h2>
+      </div>
 
-        <div class="process-step">
-          <div class="process-step-number">1</div>
+      <div class="process-grid">
+        <div class="process-step animate-on-scroll">
+          <div class="process-number">1</div>
           <h3>Free Assessment</h3>
-          <p>We identify where your child stands and what they need most.</p>
+          <p>We find the gaps and understand where your child is.</p>
         </div>
-
-        <div class="process-step">
-          <div class="process-step-number">2</div>
-          <h3>Personalized Plan</h3>
-          <p>We build a structured plan based on gaps and current coursework.</p>
+        <div class="process-step animate-on-scroll">
+          <div class="process-number">2</div>
+          <h3>Custom Plan + Tutor Match</h3>
+          <p>We build a plan and pair your child with the right tutor.</p>
         </div>
-
-        <div class="process-step">
-          <div class="process-step-number">3</div>
-          <h3>Ongoing Support</h3>
-          <p>Weekly sessions, custom worksheets, and daily drop-in help keep progress consistent.</p>
+        <div class="process-step animate-on-scroll">
+          <div class="process-number">3</div>
+          <h3>Sessions + Daily Support</h3>
+          <p>Structured sessions, worksheets, and drop-in access.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- What's Included in Every Program -->
-  <section class="section section-alt">
+
+  <!-- Feature Deep Dives -->
+  <section class="services-page section grid-bg">
     <div class="container">
-      <h2 class="text-center">What's Included in Every Program</h2>
-      <div class="gold-sep"></div>
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Our Tutoring</span>
+        <h2 class="section-title">What Makes Our Tutoring Work</h2>
+        <p class="section-subtitle">Three things that set our students up for real improvement.</p>
+      </div>
 
-      <!-- Block 1: 1-on-1 Sessions (image left, text right) -->
-      <div class="feature-block">
-        <div class="feature-block-image">
-          <div class="placeholder-img placeholder-feature" style="background: linear-gradient(135deg, var(--cream), #D6D2C8, var(--cream));">
-            Student and tutor working together in a clean academic setting
+      <!-- Feature 1: 1-on-1 Sessions -->
+      <div class="service-detail animate-on-scroll">
+        <div class="service-detail-grid">
+          <div class="service-detail-content">
+            <div class="service-icon-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>1-on-1 Tutoring Sessions</h3>
+            <p>Every session is built around your child's level, learning style, and a prepared plan.</p>
+            <ul class="service-features">
+              <li>Matched with a consistent tutor</li>
+              <li>60 or 90 minute sessions</li>
+              <li>Online or in-person (we come to you)</li>
+              <li>Structured around a personalized plan</li>
+            </ul>
           </div>
-        </div>
-        <div class="feature-block-text">
-          <h3>1-on-1 Sessions</h3>
-          <ul class="feature-list">
-            <li>60 or 90 minutes per session</li>
-            <li>Online or in-person in Edmonton</li>
-            <li>Clear structure every session</li>
-            <li>Focused on current coursework and foundations</li>
-          </ul>
+          <div class="service-detail-image">
+            <img src="assets/tutoring-session.png" alt="1-on-1 tutoring session" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+          </div>
         </div>
       </div>
 
-      <!-- Block 2: Custom Worksheets (image right, text left) -->
-      <div class="feature-block feature-block-reversed">
-        <div class="feature-block-image">
-          <div class="placeholder-img placeholder-feature" style="background: linear-gradient(135deg, var(--cream), #D6D2C8, var(--cream));">
-            Clean worksheet mockup with math problems visible
+      <!-- Feature 2: Custom Worksheets (reversed) -->
+      <div class="service-detail animate-on-scroll">
+        <div class="service-detail-grid reverse">
+          <div class="service-detail-content">
+            <div class="service-icon-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Custom Worksheets</h3>
+            <p>After every session, your child gets worksheets targeting exactly what was covered, not generic practice.</p>
+            <ul class="service-features">
+              <li>Built for each student</li>
+              <li>Reinforces session learning</li>
+              <li>Targets weak areas and gaps</li>
+              <li>New worksheets after every session</li>
+            </ul>
           </div>
-        </div>
-        <div class="feature-block-text">
-          <h3>Custom Worksheets</h3>
-          <ul class="feature-list">
-            <li>Targeted practice based on their needs</li>
-            <li>Builds on what they learned in each session</li>
-            <li>Built specifically for each student</li>
-            <li>Used between sessions for practice</li>
-          </ul>
+          <div class="service-detail-image">
+            <img src="assets/worksheet-sample.png" alt="Sample custom worksheet prepared for a student, Math 30-1 transformations" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+          </div>
         </div>
       </div>
 
-      <!-- Block 3: Daily Drop-In Support (image left, text right) -->
-      <div class="feature-block">
-        <div class="feature-block-image">
-          <div class="placeholder-img placeholder-feature" style="background: linear-gradient(135deg, var(--cream), #D6D2C8, var(--cream));">
-            Live online session with structured math on screen
+      <!-- Feature 3: Daily Drop-In Support -->
+      <div class="service-detail animate-on-scroll">
+        <div class="service-detail-grid">
+          <div class="service-detail-content">
+            <div class="service-icon-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Daily Drop-In Support</h3>
+            <p>Students get stuck between sessions. Drop-ins let them get help the same day.</p>
+            <ul class="service-features">
+              <li>Available daily online</li>
+              <li>Homework, worksheets, or test prep help</li>
+              <li>Included with every program</li>
+            </ul>
+          </div>
+          <div class="service-detail-image">
+            <div class="image-placeholder placeholder">
+              <span>Daily drop-in support session</span>
+            </div>
           </div>
         </div>
-        <div class="feature-block-text">
-          <h3>Daily Drop-In Support</h3>
-          <ul class="feature-list">
-            <li>Students can join daily online sessions</li>
-            <li>Ask homework questions in real time</li>
-            <li>Get unstuck mid-week</li>
-            <li>Extra help before quizzes and tests</li>
-          </ul>
-        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- What to Expect -->
+  <!-- Tutor Standards -->
+  <section class="tutor-standards-strip">
+    <div class="container">
+      <div class="tutor-standards-content animate-on-scroll">
+        <h2>Tutor Standards</h2>
+        <ul>
+          <li>Carefully matched to each student</li>
+          <li>Strong Grades 9-12 math background</li>
+          <li>Consistent teaching approach</li>
+          <li>Ongoing support from our team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section" style="background: var(--color-background);">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">How We Compare</span>
+        <h2 class="section-title">Why Families Choose Stone Sharp</h2>
+        <p class="section-subtitle">Structured support beyond weekly tutoring sessions.</p>
+      </div>
+
+      <div class="comparison-table-wrapper animate-on-scroll">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>What Families Get</th>
+              <th class="highlight">Stone Sharp Academy</th>
+              <th>Independent Tutor</th>
+              <th>Large Tutoring Centre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Learning Plan</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Varies</span></td>
+              <td><span class="partial">Generic</span></td>
+            </tr>
+            <tr>
+              <td>Custom Worksheets</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Alberta Aligned</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Varies</span></td>
+              <td><span class="partial">Varies</span></td>
+            </tr>
+            <tr>
+              <td>Drop-In Help</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="partial">Extra cost</span></td>
+            </tr>
+            <tr>
+              <td>Tutor Matching</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="partial">Varies</span></td>
+            </tr>
+            <tr>
+              <td>Team Support</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="check">&#10003;</span></td>
+            </tr>
+            <tr>
+              <td>In-Home Option</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Varies</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Consistent Teaching</td>
+              <td class="highlight"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Varies</span></td>
+              <td><span class="check">&#10003;</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer Stack -->
   <section class="section">
     <div class="container">
-      <h2 class="text-center">What to Expect</h2>
-      <div class="gold-sep"></div>
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">What's Included</span>
+        <h2 class="section-title">Everything Your Child Gets</h2>
+        <p class="section-subtitle">Personalized tutoring, plus support between sessions so they keep improving.</p>
+      </div>
 
-      <div class="grid grid-3" style="margin-top: 2.5rem;">
-        <div class="card">
-          <h3>Session Format</h3>
-          <p>Sessions are 1-on-1, online or in-person. Each one follows the plan with a clear goal. Not just "what homework do you have tonight?"</p>
-        </div>
-
-        <div class="card">
-          <h3>Between Sessions</h3>
-          <p>Your child gets custom worksheets to practice. If they get stuck, the daily drop-in is there so they don't have to wait until next week.</p>
-        </div>
-
-        <div class="card">
-          <h3>Communication</h3>
-          <p>If something changes at school, like a new unit or a big test, let us know. We keep the plan flexible so it always matches what your child needs.</p>
-        </div>
+      <div class="pricing-card animate-on-scroll">
+        <ul class="pricing-features">
+          <li>1-on-1 tutoring sessions</li>
+          <li>Personalized study plan</li>
+          <li>Custom worksheets after every session</li>
+          <li>Daily drop-in support sessions</li>
+          <li>Alberta curriculum alignment</li>
+          <li>Online or in-person, at home, a library, or wherever works</li>
+        </ul>
+        <p style="font-size: 0.875rem; color: var(--color-text-light); margin-bottom: var(--spacing-lg);">Pricing is provided after the free assessment based on session format and frequency. No contracts.</p>
+        <a href="book.html" class="btn btn-primary btn-lg btn-full">Book a Free Assessment</a>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="section section-alt">
+  <!-- CTA Section -->
+  <section class="cta-section">
     <div class="container">
-      <h2 class="text-center">Simple, Clear Pricing</h2>
-      <p class="section-subtitle text-center">One program. Everything included. No surprise costs.</p>
-      <div class="gold-sep"></div>
-
-      <div style="margin-top: 2.5rem;">
-        <div class="pricing-card">
-          <div class="pricing-amount">$270</div>
-          <div class="pricing-period">per month, starting price</div>
-
-          <ul class="pricing-features">
-            <li>Weekly 1-on-1 tutoring sessions</li>
-            <li>Custom worksheets for every student</li>
-            <li>Daily online drop-in sessions</li>
-            <li>Structured improvement plan</li>
-            <li>Online or in-person options</li>
-            <li>Support between sessions</li>
-          </ul>
-
-          <a href="book.html" class="btn btn-primary btn-lg" style="width: 100%;">Book a Free Assessment</a>
-          <p style="font-size: 0.8125rem; color: var(--text-light); margin-top: 1rem;">Every student starts with a free assessment. No commitment needed.</p>
+      <div class="cta-content animate-on-scroll">
+        <h2>The First Step Is Free</h2>
+        <p>Book a free assessment and we'll show you where your child stands and how we can help.</p>
+        <div class="cta-buttons">
+          <a href="book.html" class="btn btn-primary btn-lg" style="background: var(--color-primary); color: var(--color-white);">Book a Free Assessment</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>The First Step Is Free</h2>
-      <p>Book a free assessment and we'll show you where your child stands and how we can help.</p>
-      <a href="book.html" class="btn btn-white btn-lg">Book a Free Assessment</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
+          <a href="index.html" class="footer-logo">
             <img src="assets/logo.svg" alt="Stone Sharp Academy">
           </a>
           <p>Structured math tutoring for Grades 9–12. Serving Edmonton families online and in-person.</p>
         </div>
-        <div class="footer-col">
+        <div class="footer-links">
           <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="why-us.html">Why Us</a>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-links">
           <h4>More</h4>
-          <a href="success-stories.html">Success Stories</a>
-          <a href="about.html">About</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-          <a href="book.html">Book Assessment</a>
+          <ul>
+            <li><a href="success-stories.html">Testimonials</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="book.html">Book Assessment</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:7802807221">(780) 280-7221</a>
-          <a href="mailto:admin@stonesharp.academy">admin@stonesharp.academy</a>
-          <span style="display:block; padding: 0.25rem 0; font-size: 0.9rem;">Edmonton, AB</span>
+          <p><a href="tel:7802807221">(780) 280-7221</a></p>
+          <p><a href="mailto:admin@stonesharp.academy">admin@stonesharp.academy</a></p>
+          <p>Edmonton, AB</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -244,6 +318,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
