@@ -1,5 +1,6 @@
 import os
 import re
+import time
 import resend
 from flask import Flask, request, redirect, send_from_directory, jsonify
 from datetime import datetime
@@ -34,6 +35,9 @@ app = Flask(__name__, static_folder='../frontend', static_url_path='')
 resend.api_key = os.environ.get('RESEND_API_KEY')
 NOTIFICATION_EMAIL = 'torsten@stonesharp.academy'
 EMAIL_FROM = os.environ.get('EMAIL_FROM', 'noreply@stonesharpacademy.com')
+
+# Cache-bust version — regenerated on every deploy
+DEPLOY_VERSION = str(int(time.time()))
 
 # Database setup
 DATABASE_URL = os.environ.get('DATABASE_URL')
@@ -82,9 +86,16 @@ def favicon():
 
 @app.route('/<path:path>')
 def static_files(path):
-    response = send_from_directory(app.static_folder, path)
-    if path.endswith(('.js', '.css')):
-        response.headers['Cache-Control'] = 'no-cache, must-revalidate'
+    return send_from_directory(app.static_folder, path)
+
+
+@app.after_request
+def cache_bust_html(response):
+    if response.content_type and 'text/html' in response.content_type:
+        data = response.get_data(as_text=True)
+        data = data.replace('.js"', f'.js?v={DEPLOY_VERSION}"')
+        data = data.replace('.css"', f'.css?v={DEPLOY_VERSION}"')
+        response.set_data(data)
     return response
 
 
