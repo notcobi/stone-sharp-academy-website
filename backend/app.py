@@ -82,7 +82,10 @@ def favicon():
 
 @app.route('/<path:path>')
 def static_files(path):
-    return send_from_directory(app.static_folder, path)
+    response = send_from_directory(app.static_folder, path)
+    if path.endswith(('.js', '.css')):
+        response.headers['Cache-Control'] = 'no-cache, must-revalidate'
+    return response
 
 
 @app.route('/submit', methods=['POST'])
